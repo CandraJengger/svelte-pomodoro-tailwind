@@ -63,9 +63,17 @@
 </script>
 
 <section>
-  <p>{formatTime(pomodoroTime)}</p>
-  <footer>
-    <button on:click={startPomodoro}>start</button>
-    <button on:click={cancelPomodoro}>cancel</button>
+  <p class="text-center text-5xl my-8">{formatTime(pomodoroTime)}</p>
+  <footer class="flex justify-center items-center">
+    <button
+      on:click={startPomodoro}
+      class="rounded-md flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-green-600  hover:bg-green-700 mx-3"
+      >start</button
+    >
+    <button
+      on:click={cancelPomodoro}
+      class="rounded-md flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-white  mx-3 border border-gray-900"
+      >cancel</button
+    >
   </footer>
 </section>
