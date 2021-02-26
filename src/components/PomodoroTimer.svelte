@@ -56,11 +56,16 @@
     clearInterval(interval);
     pomodoroTime = POMODORO_S;
   }
+
+  function cancelPomodoro() {
+    idle();
+  }
 </script>
 
 <section>
   <p>{formatTime(pomodoroTime)}</p>
   <footer>
     <button on:click={startPomodoro}>start</button>
+    <button on:click={cancelPomodoro}>cancel</button>
   </footer>
 </section>
