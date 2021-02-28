@@ -62,17 +62,19 @@
   }
 </script>
 
-<section>
-  <p class="text-center text-5xl my-8">{formatTime(pomodoroTime)}</p>
-  <footer class="flex justify-center items-center">
+<section class="w-full p-5 text-center">
+  <span class="inline-block text-5xl my-8  transform scale-150">
+    {formatTime(pomodoroTime)}
+  </span>
+  <footer class="flex justify-center items-center flex-col">
     <button
       on:click={startPomodoro}
-      class="rounded-md flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-green-600  hover:bg-green-700 mx-3"
+      class="rounded-md w-full flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-green-600  hover:bg-green-700 mx-3 mb-4"
       >start</button
     >
     <button
       on:click={cancelPomodoro}
-      class="rounded-md flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-white  mx-3 border border-gray-900"
+      class="rounded-md w-full flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-white  mx-3 border border-gray-900"
       >cancel</button
     >
   </footer>
