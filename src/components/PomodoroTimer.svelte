@@ -62,8 +62,10 @@
   }
 </script>
 
-<section class="w-full p-5 text-center">
-  <span class="inline-block text-5xl my-8  transform scale-150">
+<section class="w-full p-5 text-center flex flex-col">
+  <span
+    class="inline-block text-7xl my-8  transform transition-all duration-200 bg-gray-100 px-5 py-5 rounded-md opacity-70 shadow-md hover:-translate-y-2 hover:opacity-90"
+  >
     {formatTime(pomodoroTime)}
   </span>
   <footer class="flex justify-center items-center flex-col">
