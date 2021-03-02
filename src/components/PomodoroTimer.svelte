@@ -71,12 +71,12 @@
   <footer class="row-start-4 flex justify-center items-center flex-col">
     <button
       on:click={startPomodoro}
-      class="rounded-md w-full flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider text-white bg-gray-800 hover:bg-gray-900 mx-3 mb-4"
+      class="rounded-md w-full flex justify-center items-center px-7 py-5 font-medium text-md uppercase tracking-wider text-white bg-gray-800 hover:bg-gray-900 mx-3 mb-4"
       >start</button
     >
     <button
       on:click={cancelPomodoro}
-      class="rounded-md w-full flex justify-center items-center px-7 py-3 font-medium text-md uppercase tracking-wider bg-green-600  hover:bg-green-700 mx-3"
+      class="rounded-md w-full flex justify-center items-center px-7 py-5 font-medium text-md uppercase tracking-wider bg-green-600  hover:bg-green-700 mx-3"
       >cancel</button
     >
   </footer>
