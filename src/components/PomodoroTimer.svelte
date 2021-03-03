@@ -1,5 +1,6 @@
 <script>
   import BlockTime from './BlockTime.svelte';
+  import Button from './Button.svelte';
 
   const minutesToSeconds = (minutes) => minutes * 60;
   const secondsToMinutes = (seconds) => Math.floor(seconds / 60);
@@ -71,15 +72,7 @@
   <footer
     class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
   >
-    <button
-      on:click={startPomodoro}
-      class="rounded-md w-full flex justify-center items-center px-7 py-5 font-semibold text-xl uppercase tracking-wider text-white bg-gray-900 hover:bg-gray-800 mx-3 mb-4 focus:outline-none"
-      >start</button
-    >
-    <button
-      on:click={cancelPomodoro}
-      class="rounded-md w-full flex justify-center items-center px-7 py-5 font-semibold text-md uppercase tracking-wider text-gray-800 bg-green-600  hover:bg-green-700 mx-3 focus:outline-none"
-      >cancel</button
-    >
+    <Button type="primary" text="start" on:clickButton={startPomodoro} />
+    <Button type="secondary" text="cancel" on:clickButton={cancelPomodoro} />
   </footer>
 </section>
