@@ -1,4 +1,6 @@
 <script>
+  import BlockTime from './BlockTime.svelte';
+
   const minutesToSeconds = (minutes) => minutes * 60;
   const secondsToMinutes = (seconds) => Math.floor(seconds / 60);
   const padWithZeroes = (number) => number.toString().padStart(2, '0');
@@ -65,11 +67,7 @@
 <section
   class="w-full h-screen px-5 text-center grid grid-flow-row grid-rows-6"
 >
-  <span
-    class="row-start-1 row-end-3 flex justify-center items-center text-7xl transform translate-y-4 transition-all duration-200 bg-gray-100 px-5 py-5 rounded-md opacity-80 shadow-md hover:-translate-y-0 hover:opacity-90"
-  >
-    {formatTime(pomodoroTime)}
-  </span>
+  <BlockTime time={formatTime(pomodoroTime)} />
   <footer
     class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
   >
