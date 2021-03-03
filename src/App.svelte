@@ -4,10 +4,10 @@
   import PomodoroTimer from './components/PomodoroTimer.svelte';
 </script>
 
-<main
-  class="bg-green-500 w-full h-screen flex justify-center items-center flex-col"
->
-  <h1 class="mb-4 text-2xl font-extrabold tracking-widest">
+<main class="bg-green-500 w-full flex justify-center items-center flex-col">
+  <h1
+    class="block w-full py-4 text-center text-xl font-extrabold tracking-widest"
+  >
     {title}
   </h1>
   <PomodoroTimer />

@@ -62,13 +62,17 @@
   }
 </script>
 
-<section class="w-full h-4/5 p-5 text-center grid grid-flow-row grid-rows-6">
+<section
+  class="w-full h-screen px-5 text-center grid grid-flow-row grid-rows-6"
+>
   <span
     class="row-start-1 row-end-3 flex justify-center items-center text-7xl transform translate-y-4 transition-all duration-200 bg-gray-100 px-5 py-5 rounded-md opacity-80 shadow-md hover:-translate-y-0 hover:opacity-90"
   >
     {formatTime(pomodoroTime)}
   </span>
-  <footer class="row-start-5 flex justify-center items-center flex-col">
+  <footer
+    class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
+  >
     <button
       on:click={startPomodoro}
       class="rounded-md w-full flex justify-center items-center px-7 py-5 font-semibold text-xl uppercase tracking-wider text-white bg-gray-900 hover:bg-gray-800 mx-3 mb-4 focus:outline-none"
