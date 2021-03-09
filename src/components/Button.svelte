@@ -1,6 +1,7 @@
 <script>
   export let text;
   export let type;
+  export let disabled;
 
   import { createEventDispatcher } from 'svelte';
 
@@ -20,6 +21,7 @@
 <button
   on:click={handleClick}
   class={type === 'primary' ? typeBtn.BTN_PRIMARY : typeBtn.BTN_SECONDARY}
+  {disabled}
 >
   {text}
 </button>

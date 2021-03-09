@@ -2,6 +2,14 @@
   import BlockTime from './BlockTime.svelte';
   import Button from './Button.svelte';
 
+  const STATE = {
+    idle: 'idle',
+    inProgress: 'in progress',
+    resting: 'resting',
+  };
+
+  let currentState = STATE.idle;
+
   const minutesToSeconds = (minutes) => minutes * 60;
   const secondsToMinutes = (seconds) => Math.floor(seconds / 60);
   const padWithZeroes = (number) => number.toString().padStart(2, '0');
@@ -26,6 +34,7 @@
   }
 
   function startPomodoro() {
+    currentState = STATE.inProgress;
     interval = setInterval(() => {
       if (pomodoroTime === 0) {
         completePomodoro();
@@ -46,6 +55,7 @@
   }
 
   function rest(time) {
+    currentState = STATE.resting;
     pomodoroTime = time;
     interval = setInterval(() => {
       if (pomodoroTime === 0) {
@@ -56,6 +66,7 @@
   }
 
   function idle() {
+    currentState = STATE.idle;
     clearInterval(interval);
     pomodoroTime = POMODORO_S;
   }
@@ -72,7 +83,17 @@
   <footer
     class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
   >
-    <Button type="primary" text="start" on:clickButton={startPomodoro} />
-    <Button type="secondary" text="cancel" on:clickButton={cancelPomodoro} />
+    <Button
+      type="primary"
+      text="start"
+      on:clickButton={startPomodoro}
+      disabled={currentState !== STATE.idle}
+    />
+    <Button
+      type="secondary"
+      text="cancel"
+      on:clickButton={cancelPomodoro}
+      disabled={currentState !== STATE.inProgress}
+    />
   </footer>
 </section>
