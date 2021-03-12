@@ -1,6 +1,7 @@
 <script>
   import BlockTime from './BlockTime.svelte';
   import Button from './Button.svelte';
+  import { minutesToSeconds, formatTime } from '../utils/time.js';
 
   const STATE = {
     idle: 'idle',
@@ -9,10 +10,6 @@
   };
 
   let currentState = STATE.idle;
-
-  const minutesToSeconds = (minutes) => minutes * 60;
-  const secondsToMinutes = (seconds) => Math.floor(seconds / 60);
-  const padWithZeroes = (number) => number.toString().padStart(2, '0');
 
   const LONG_BREAK_S = minutesToSeconds(20);
   const SHORT_BREAK_S = minutesToSeconds(5);
@@ -26,12 +23,6 @@
 
   // to stop interval
   let interval;
-
-  function formatTime(timeInSeconds) {
-    const minutes = secondsToMinutes(timeInSeconds);
-    const remainingSeconds = timeInSeconds % 60;
-    return `${padWithZeroes(minutes)}:${padWithZeroes(remainingSeconds)}`;
-  }
 
   function startPomodoro() {
     currentState = STATE.inProgress;
