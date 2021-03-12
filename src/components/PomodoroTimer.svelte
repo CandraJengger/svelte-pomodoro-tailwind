@@ -76,9 +76,7 @@
   }
 </script>
 
-<section
-  class="w-full h-screen px-8 text-center grid grid-flow-row grid-rows-6"
->
+<section class="w-full h-screen text-center grid grid-flow-row grid-rows-6">
   <BlockTime time={formatTime(pomodoroTime)} />
   <footer
     class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
