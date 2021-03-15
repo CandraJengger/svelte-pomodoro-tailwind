@@ -20344,6 +20344,10 @@ video {
   grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
+.grid-rows-9 {
+  grid-template-rows: repeat(9, minmax(0, 1fr));
+}
+
 .grid-rows-none {
   grid-template-rows: none;
 }
@@ -43364,6 +43368,10 @@ video {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
+  .sm\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+
   .sm\:grid-rows-none {
     grid-template-rows: none;
   }
@@ -66348,6 +66356,10 @@ video {
 
   .md\:grid-rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
   .md\:grid-rows-none {
@@ -89336,6 +89348,10 @@ video {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
+  .lg\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+
   .lg\:grid-rows-none {
     grid-template-rows: none;
   }
@@ -112322,6 +112338,10 @@ video {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
+  .xl\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+
   .xl\:grid-rows-none {
     grid-template-rows: none;
   }
@@ -135306,6 +135326,10 @@ video {
 
   .\32xl\:grid-rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
   .\32xl\:grid-rows-none {

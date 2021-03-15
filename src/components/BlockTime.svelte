@@ -2,8 +2,11 @@
   export let time;
 </script>
 
-<span
-  class="row-start-1 row-end-3 flex justify-center items-center text-7xl transform translate-y-4 transition-all duration-200 bg-red-200 px-5 py-5 rounded-md shadow-md hover:-translate-y-0"
+<div
+  class="row-start-1 row-end-5 flex justify-center flex-col items-center transform translate-y-4 transition-all duration-200 bg-red-200 px-5 pt-4 rounded-md shadow-md hover:-translate-y-0"
 >
-  {time}
-</span>
+  <span class="text-7xl mb-7">
+    {time}
+  </span>
+  <slot />
+</div>

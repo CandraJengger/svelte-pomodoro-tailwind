@@ -12,10 +12,10 @@
   let currentState = STATE.idle;
 
   const LONG_BREAK_S = minutesToSeconds(20);
-  const SHORT_BREAK_S = minutesToSeconds(0.1);
+  const SHORT_BREAK_S = minutesToSeconds(0.1); // 5
   let completedPomodoros = 0;
 
-  // length of a pomodoro in seconds
+  // length of a pomodoro in seconds 25
   const POMODORO_S = minutesToSeconds(0.2);
 
   // time left in the current pomodoro
@@ -67,11 +67,8 @@
   }
 </script>
 
-<section class="w-full h-screen text-center grid grid-flow-row grid-rows-6">
-  <BlockTime time={formatTime(pomodoroTime)} />
-  <footer
-    class="row-start-5 flex justify-center items-center flex-col transform -translate-y-4"
-  >
+<section class="w-full h-screen text-center grid grid-flow-row grid-rows-9">
+  <BlockTime time={formatTime(pomodoroTime)}>
     <Button
       type={currentState === STATE.idle ? 'primary' : 'secondary'}
       text={currentState === STATE.idle ? 'start' : 'cancel'}
@@ -79,5 +76,8 @@
         ? startPomodoro
         : cancelPomodoro}
     />
-  </footer>
+  </BlockTime>
+  <footer
+    class="row-start-6 bg-red-500 flex justify-center items-center flex-col transform -translate-y-4"
+  />
 </section>
