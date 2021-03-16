@@ -2,6 +2,7 @@
   import BlockTime from './BlockTime.svelte';
   import Button from './Button.svelte';
   import { minutesToSeconds, formatTime } from '../utils/time.js';
+  import TaskList from './TaskList.svelte';
 
   const STATE = {
     idle: 'idle',
@@ -77,7 +78,11 @@
         : cancelPomodoro}
     />
   </BlockTime>
-  <footer
-    class="row-start-6 bg-red-500 flex justify-center items-center flex-col transform -translate-y-4"
-  />
+  <div
+    class="row-start-5 row-end-6 flex justify-center items-center flex-col transform -translate-y-4"
+  >
+    <h3 class="text-md mb-2 uppercase text-gray-700">Working On</h3>
+    <h4 class="text-lg font-bold tracking-widest">Kerjo</h4>
+  </div>
+  <TaskList />
 </section>

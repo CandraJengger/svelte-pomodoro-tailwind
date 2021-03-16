@@ -23572,7 +23572,7 @@ video {
 }
 
 * {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 @media (min-width: 640px) {

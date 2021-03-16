@@ -1,8 +1,7 @@
 <script>
   import { todos } from '../store';
-  console.log(typeof todos);
 </script>
 
-<div class="container bg-red-500">
+<div class="row-start-6 row-end-auto container bg-red-200">
   <h1>task list</h1>
 </div>
