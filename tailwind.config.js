@@ -8,6 +8,7 @@ module.exports = {
       red: { ...colors.red, 200: '#fabea7', 100: '#fbe2e5' },
       gray: { ...colors.coolGray, 400: '#9cada4', 500: '#767c77' },
       blue: { ...colors.blue, 300: '#9fd8df' },
+      white: colors.white,
     },
     extend: {
       gridTemplateRows: {

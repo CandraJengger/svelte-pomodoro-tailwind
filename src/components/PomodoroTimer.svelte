@@ -3,7 +3,6 @@
   import Button from './Button.svelte';
   import { minutesToSeconds, formatTime } from '../utils/time.js';
   import TaskList from './TaskList.svelte';
-  import FAB from './FloatActionButton.svelte';
 
   const STATE = {
     idle: 'idle',
@@ -86,5 +85,4 @@
     <h4 class="text-lg font-bold tracking-widest">Kerjo</h4>
   </div>
   <TaskList />
-  <FAB text="+" on:clickButton={() => console.log('kenek slr')} />
 </section>
