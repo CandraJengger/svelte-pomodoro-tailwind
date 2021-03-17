@@ -14,6 +14,6 @@
 <button
   on:click={handleClick}
   style="width: 48px; height: 48px"
-  class="fixed bottom-4 right-4 bg-blue-300 rounded-full z-50 font-bold text-3xl text-gray-900 shadow-md focus:outline-none"
+  class="fixed bottom-6 right-6 bg-blue-300 rounded-full z-50 font-bold text-3xl text-gray-900 shadow-md focus:outline-none"
   >{text}</button
 >
