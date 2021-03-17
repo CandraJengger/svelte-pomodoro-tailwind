@@ -3,6 +3,7 @@
   import PomodoroTimer from './components/PomodoroTimer.svelte';
   import Modal from './components/Modal.svelte';
   import FAB from './components/FloatActionButton.svelte';
+  import Overlay from './components/Overlay.svelte';
 
   // state
   let open = false;
@@ -24,6 +25,7 @@
   <PomodoroTimer />
   <FAB text="+" on:clickButton={openModal} />
   <Modal {open} {hidden} on:handleClose={closeModal} />
+  <Overlay {open} {hidden} />
 </main>
 
 <style>
