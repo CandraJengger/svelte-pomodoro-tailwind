@@ -5,6 +5,8 @@
   import FAB from './components/FloatActionButton.svelte';
   import Overlay from './components/Overlay.svelte';
 
+  import { todos } from './store';
+
   // state
   let open = false;
   let hidden = true;
@@ -18,13 +20,19 @@
     open = false;
     hidden = true;
   }
+
+  function addTodo(event) {
+    todos.update((value) => [...value, event.detail.todo]);
+    open = false;
+    hidden = true;
+  }
 </script>
 
 <main class="bg-red-100 px-8 w-full flex justify-center items-center flex-col">
   <Title title="Pomopomo" />
   <PomodoroTimer />
   <FAB text="+" on:clickButton={openModal} />
-  <Modal {open} {hidden} on:handleClose={closeModal} />
+  <Modal {open} {hidden} on:handleClose={closeModal} on:handleSave={addTodo} />
   <Overlay {open} {hidden} />
 </main>
 

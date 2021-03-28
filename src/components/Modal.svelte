@@ -4,8 +4,18 @@
   export let block = false;
   export let hidden = true;
 
+  let task = '';
+  console.log(task);
+
   const dispatch = createEventDispatcher();
   const handleClose = () => dispatch('handleClose');
+  const handleSave = () =>
+    dispatch('handleSave', {
+      todo: {
+        text: task,
+        finished: false,
+      },
+    });
 </script>
 
 <div
@@ -17,6 +27,7 @@
     type="text"
     placeholder="What are you working on ?"
     class="mb-7 w-full focus:outline-none text-lg px-2 py-3 border-b border-red-500"
+    bind:value={task}
   />
 
   <div class="flex justify-end">
@@ -25,7 +36,7 @@
     >
     <button
       class="mx-2 focus:outline-none bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md"
-      >Save</button
+      on:click={handleSave}>Save</button
     >
   </div>
 </div>
