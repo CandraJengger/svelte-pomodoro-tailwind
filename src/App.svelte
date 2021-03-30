@@ -1,4 +1,6 @@
 <script>
+  import { onDestroy } from 'svelte';
+
   import Title from './components/Title.svelte';
   import PomodoroTimer from './components/PomodoroTimer.svelte';
   import Modal from './components/Modal.svelte';
@@ -27,11 +29,18 @@
     hidden = true;
     event.detail.resetInput();
   }
+
+  let todos_value;
+  const unsubscribe = todos.subscribe((value) => {
+    todos_value = [...value];
+  });
+
+  onDestroy(unsubscribe);
 </script>
 
 <main class="bg-red-100 px-8 w-full flex justify-center items-center flex-col">
   <Title title="Pomopomo" />
-  <PomodoroTimer />
+  <PomodoroTimer data={todos_value} />
   <FAB text="+" on:clickButton={openModal} />
   <Modal
     block={open}
