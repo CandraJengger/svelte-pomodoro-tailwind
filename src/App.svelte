@@ -25,6 +25,7 @@
     todos.update((value) => [...value, event.detail.todo]);
     open = false;
     hidden = true;
+    event.detail.resetInput();
   }
 </script>
 
@@ -32,8 +33,13 @@
   <Title title="Pomopomo" />
   <PomodoroTimer />
   <FAB text="+" on:clickButton={openModal} />
-  <Modal {open} {hidden} on:handleClose={closeModal} on:handleSave={addTodo} />
-  <Overlay {open} {hidden} />
+  <Modal
+    block={open}
+    {hidden}
+    on:handleClose={closeModal}
+    on:handleSave={addTodo}
+  />
+  <Overlay block={open} {hidden} />
 </main>
 
 <style>

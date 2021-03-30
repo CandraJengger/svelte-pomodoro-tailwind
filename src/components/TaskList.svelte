@@ -23,8 +23,6 @@
     todos_value = [...value];
   });
 
-  console.log(todos_value);
-
   onDestroy(unsubscribe);
 </script>
 

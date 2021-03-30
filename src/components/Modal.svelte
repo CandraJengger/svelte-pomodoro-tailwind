@@ -5,7 +5,6 @@
   export let hidden = true;
 
   let task = '';
-  console.log(task);
 
   const dispatch = createEventDispatcher();
   const handleClose = () => dispatch('handleClose');
@@ -15,6 +14,7 @@
         text: task,
         finished: false,
       },
+      resetInput: () => (task = ''),
     });
 </script>
 
