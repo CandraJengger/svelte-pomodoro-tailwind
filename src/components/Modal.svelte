@@ -19,7 +19,7 @@
 </script>
 
 <div
-  class="fixed w-5/6 top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4 z-50 bg-white shadow-lg rounded-md py-5 px-6"
+  class="fixed w-80 top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4 z-50 bg-white shadow-lg rounded-md py-5 px-6"
   class:block
   class:hidden
 >
@@ -40,12 +40,3 @@
     >
   </div>
 </div>
-
-<style>
-  .block {
-    display: block;
-  }
-  .hidden {
-    display: none;
-  }
-</style>
