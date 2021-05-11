@@ -15,11 +15,11 @@
   let currentState = STATE.idle;
 
   const LONG_BREAK_S = minutesToSeconds(20);
-  const SHORT_BREAK_S = minutesToSeconds(0.1); // 5
+  const SHORT_BREAK_S = minutesToSeconds(5); // 5
   let completedPomodoros = 0;
 
   // length of a pomodoro in seconds 25
-  const POMODORO_S = minutesToSeconds(0.2);
+  const POMODORO_S = minutesToSeconds(25);
 
   // time left in the current pomodoro
   let pomodoroTime = POMODORO_S;
