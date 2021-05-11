@@ -17,6 +17,10 @@
 
     event.detail.toggleFinished();
   };
+
+  const handleDeleteItemFromData = (text) => {
+    data = data.filter((item) => item.text !== text);
+  };
 </script>
 
 <div
@@ -35,6 +39,7 @@
         {text}
         {finished}
         on:handleClick={(e) => handleToggleFinish(e, text)}
+        on:handleDelete={() => handleDeleteItemFromData(text)}
       />
     {/each}
   </ul>
