@@ -5,7 +5,6 @@
   import TaskList from './TaskList.svelte';
 
   export let data = [];
-  $: workingOn = data.filter((item) => item.finished !== true);
 
   const STATE = {
     idle: 'idle',
@@ -81,14 +80,6 @@
         : cancelPomodoro}
     />
   </BlockTime>
-  <div
-    class="row-start-5 row-end-6 flex justify-center items-center flex-col transform -translate-y-4"
-  >
-    <h3 class="text-md mb-2 uppercase text-gray-700">Working On</h3>
-    <h4 class="text-lg font-bold tracking-widest">
-      {workingOn.length > 0 ? workingOn[0].text : ''}
-    </h4>
-  </div>
 
   <TaskList {data} />
 </section>

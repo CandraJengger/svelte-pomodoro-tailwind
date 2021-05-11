@@ -1,10 +1,17 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
   export let text = '';
   export let finished = false;
 
-  const handleClick = () => {
-    finished = !finished;
-  };
+  const dispatch = createEventDispatcher();
+
+  const handleClick = () =>
+    dispatch('handleClick', {
+      toggleFinished: () => {
+        finished = !finished;
+      },
+    });
 </script>
 
 <li
